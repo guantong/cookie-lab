@@ -55,9 +55,18 @@ npm run preview
 
 To preview it on other devices on your Wi-Fi, use `npm run preview -- --host 0.0.0.0` and open the network URL Vite prints.
 
-## Deploy
+## Deploy to GitHub Pages
 
-This is a static site. Run `npm run build`, then publish the contents of `dist/` with a static host such as Netlify, Vercel, or GitHub Pages. A public deployment can be opened from any device with a browser.
+The included GitHub Actions workflow builds and deploys the site whenever changes are pushed to `main`. To enable it:
+
+1. Push this repository to GitHub.
+2. In the repository, open **Settings > Pages**.
+3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+4. Open the **Actions** tab and wait for the **Deploy to GitHub Pages** workflow to finish.
+
+The deployed site will be available at `https://guantong.github.io/cookie-lab/`. You can also start a deployment manually from the workflow's **Run workflow** button in the Actions tab. The Vite configuration uses relative asset paths, so the site also works when previewed locally.
+
+To deploy another repository, update the URL above to match its GitHub owner and repository name.
 
 ## Project Files
 
